@@ -9,8 +9,8 @@ export default function SearchBox() {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (!search) return;
-
     router.push(`/search/${search}`);
+    setSearch("");
   };
   const handleSearch = (e: ChangeEvent<HTMLInputElement>): void => {
     setSearch(e.target.value);
